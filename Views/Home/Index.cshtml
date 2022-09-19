@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Contact.Models.Contacts>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Список контактов</h3>
+
+<p> <!--Кнопка-->
+     <a asp-action="Create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"> Создать контакт </a>
+     @await Html.PartialAsync("Create", new Contacts()) 
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Имя")
+            </th>
+            <th>
+                @Html.DisplayName("Номер телефона")
+            </th>            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>            
+             
+            <td>                
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Информация</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
