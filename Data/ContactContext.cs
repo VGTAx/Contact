@@ -12,8 +12,13 @@ namespace Contact.Data
         public ContactContext (DbContextOptions<ContactContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<Contact.Models.Contacts> Contact { get; set; } = default!;
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Filename=Contact.db");
+        }
     }
 }
