@@ -3,12 +3,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Contact.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ContactContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ContactContext") ?? throw new InvalidOperationException("Connection string 'ContactContext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("ContactContext") ?? throw new InvalidOperationException("Connection string 'ContactContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
