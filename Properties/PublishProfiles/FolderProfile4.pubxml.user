@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Putin\Desktop\ContactPublish</_PublishTargetUrl>
+    <History>True|2022-09-19T23:06:27.6909068Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ContactContext">
+      <Value>Data Source=%28localdb%29\mssqllocaldb%3bAttachDbFilename=|DataDirectory|\Contact.Data.mdf%3bIntegrated Security=True%3bMultipleActiveResultSets=True</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

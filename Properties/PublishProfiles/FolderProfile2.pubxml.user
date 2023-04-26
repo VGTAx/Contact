@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\test</_PublishTargetUrl>
+    <History>False|2022-09-19T20:50:49.4778762Z;True|2022-09-19T23:49:57.4500920+03:00;True|2022-09-19T23:48:37.0938918+03:00;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ContactContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-53bc9b9d-9d6a-45d4-8429-2a2761773502%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

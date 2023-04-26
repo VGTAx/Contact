@@ -20,9 +20,16 @@ namespace Contact.Controllers
         }
 
         // GET: Contacts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return View(await _context.Contact.ToListAsync());
+            var contacts = from c in _context.Contact
+                           select c;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                contacts = contacts!.Where(c => c.Name!.Contains(searchString));
+            }
+            return View(await contacts.ToListAsync());
         }
 
         // GET: Contacts/Details/5
@@ -46,7 +53,7 @@ namespace Contact.Controllers
         // GET: Contacts/Create
         public IActionResult Create()
         {
-            return PartialView();
+            return View();
         }
 
         // POST: Contacts/Create

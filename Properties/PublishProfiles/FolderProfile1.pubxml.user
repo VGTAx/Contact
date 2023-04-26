@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Putin\Desktop\rfdsf</_PublishTargetUrl>
+    <History>True|2022-09-19T20:36:25.6520071Z;True|2022-09-19T23:27:01.0785421+03:00;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ContactContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=Contact.Data%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Contact.Data.ContactContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=Contact.Data%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

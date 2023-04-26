@@ -12,7 +12,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-         <form id="myForm" asp-action="Edit" onsubmit="validateForm()">
+         <form id="myForm" asp-action="Edit" mmethod="post" onsubmit="validateForm()">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -48,5 +48,6 @@
    
 </div>
 
-<!--Скрипт валидации введенных данных-->
+@*<!--Скрипт валидации введенных данных-->
 <script src="~/js/site.js"></script>
+*@

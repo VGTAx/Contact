@@ -6,6 +6,13 @@
 
 <h3>Список контактов</h3>
 
+<form asp-controller="Home" asp-action="Index">
+     <p>
+        Имя: <input type="text" name="searchString" />
+        <input type="submit" value="Поиск" />
+    </p>
+</form>
+
 <p> <!--Кнопка-->
      <a asp-action="Create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"> Создать контакт </a>
      @await Html.PartialAsync("Create", new Contacts()) 
@@ -18,8 +25,7 @@
             </th>
             <th>
                 @Html.DisplayName("Номер телефона")
-            </th>            
-            <th></th>
+            </th> 
         </tr>
     </thead>
     <tbody>
