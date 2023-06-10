@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Contact.Data;
+﻿using Contact.Data;
 using Contact.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contact.Controllers
 {
@@ -25,14 +20,14 @@ namespace Contact.Controllers
             var contacts = from c in _context.Contact
                            select c;
 
-            if(!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
                 contacts = contacts!.Where(c => c.Name!.Contains(searchString));
             }
             return View(await contacts.ToListAsync());
         }
 
-        // GET: Contacts/Details/5
+        // GET: Contacts/Details/id
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Contact == null)
@@ -56,9 +51,6 @@ namespace Contact.Controllers
             return View();
         }
 
-        // POST: Contacts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,PhoneNumber,JobTitle,BirthDay")] Contacts contact)
@@ -85,12 +77,10 @@ namespace Contact.Controllers
             {
                 return NotFound();
             }
-            return PartialView("Edit",contact);
+            return PartialView("Edit", contact);
         }
 
-        // POST: Contacts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Contacts/Edit/5        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,PhoneNumber,JobTitle,BirthDay")] Contacts contact)
@@ -155,14 +145,14 @@ namespace Contact.Controllers
             {
                 _context.Contact.Remove(contact);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ContactExists(int id)
         {
-          return _context.Contact.Any(e => e.Id == id);
+            return _context.Contact.Any(e => e.Id == id);
         }
     }
 }
