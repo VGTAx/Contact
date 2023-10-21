@@ -1,22 +1,25 @@
 # Contact-List
-Cписок контактов - это веб-приложение предназначенное для хранения и управления списком контактов пользователей.<br> 
+Contact List is a web application designed to store and manage a list of user contacts.<br>
 
-Приложение построено с помощью фреймворка <b>ASP.NET</b>  на языке программирования <b>C#</b>.<br>
-Приложение имеет простой и лаконичный дизайн, реализованный с помощью <b>HTML</b> и <b>CSS</b>. Для валидации данных используется <b>JavaScript</b>.<br>
-Все данные контактов хранятся в базе данных. Провайдер базы данных: <b>SQLite</b>. Для работы с базой данных используется <b>ORM - Entity Framework</b>.<br>
+The application is built using the <b>ASP.NET</b> framework in the <b>C#</b> programming language.<br>
+The application has a simple and concise design, implemented using <b>HTML</b> and <b>CSS</b>. <b>JavaScript</b> is used for data validation.<br>
+All contact data is stored in a database. Database provider: <b>SQLite</b>. To work with the database, <b>ORM - Entity Framework</b> is used.<br>
 
-<b>Основные функции приложения</b>:
+<b>Main functions of the application</b>:
 <ul>
-  <li> Добавление контактов: пользователи могут добавлять новые контакты в список, указывая информацию о имени, номере телефона и других контактных данных.<br></li>
-  <li> Редактирование контактов: позволяет редактировать контакты.<br></li>
-  <li> Удаление контактов: позволяет удалить контакты.<br></li>
-  <li> Поиск контактов: позволяет искать контакты по имени.<br></li>
+   <li>Adding Contacts: Users can add new contacts to the list by providing name, phone number, and other contact details.<br></li>
+   <li>Edit Contacts: Allows you to edit your contacts.<br></li>
+   <li>Delete contacts: Allows you to delete contacts.<br></li>
+   <li>Contact Search: Allows you to search for contacts by name.<br></li>
 </ul>
 
-<b>Инструкции по установке и использованию:</b>
+<b>Installation and use instructions:</b>
+
 <ol>
-  <li>Скачайте все файлы проекта с репозитория на GitHub и сохраните их в локальной папке на компьютере.</li>
-  <li>Откройте среду разработки, которую вы используете для работы с проектом.</li>
-  <li>Запустите проект из среды разработки. Если вы используете Visual Studio, нажмите кнопку "Запустить" или нажмите клавишу F5.</li>
-  <li>Если проект успешно запустился, перейдите по адресу localhost:port в браузере, где "port" - это порт, на котором запущен проект.</li>
+   <li>Clone the repository.</li>
+   <li>Go to the project directory.</li>
+   <li>Make sure you have the .NET SDK installed. If not, install it from the official .NET site: https://dotnet.microsoft.com/download/dotnet</li>
+   <li>Restore the project dependencies using the command: <b><i>dotnet restore</i></b></li>
+   <li>Run the App using the command: <b><i>dotnet run</i></b></li>
+    <li>If the project started successfully, enter <b><i>https://localhost:port</i></b> in the browser prompt, where "port" is the port on which the project is running.</li>
 </ol>
